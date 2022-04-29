@@ -1,0 +1,22 @@
+.loader-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.loading-text {
+  color: rgb(54, 199, 204);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loader-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
