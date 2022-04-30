@@ -1,39 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 
 import RobotList from "./components/RobotList";
 import SearchBox from "./components/SearchBox";
 import Loading from "./components/loader/Loading";
 import Scrollable from "./components/Scrollable";
+import {setSearchField,setRobots} from './actions/actions'
 import "./App.css";
 
-const App = () => {
-  const [searchField, setSearchField] = useState("");
-  const [robotList, setRobotList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+const App = ({setSearchField, setRobots, searchField, robots, isLoading }) => {
 
   useEffect(() => {
-    fetchRobots();
+    setRobots();
   }, []);
-
-  const fetchRobots = async () => {
-    try {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      const robots = await res.json();
-      setRobotList(robots);
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 200);
-    } catch (error) {
-      console.log("Error fetching users.");
-      console.log(error);
-    }
-  };
 
   const handleTextChange = (e) => {
     setSearchField(e.target.value);
   };
 
-  const filteredRobots = robotList.filter((robot) =>
+  const filteredRobots = robots.filter((robot) =>
     robot.name.toLowerCase().includes(searchField.toLocaleLowerCase())
   );
   return (
@@ -54,4 +39,15 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  robots: state.reducer.robots,
+  searchField: state.reducer.searchField,
+  isLoading: state.reducer.isLoading
+});
+
+const mapActionsToProps = {
+  setSearchField,
+  setRobots,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(App);
