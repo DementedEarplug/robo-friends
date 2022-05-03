@@ -5,6 +5,7 @@ import RobotList from "./components/RobotList";
 import SearchBox from "./components/SearchBox";
 import Loading from "./components/loader/Loading";
 import Scrollable from "./components/Scrollable";
+import Header from "./components/Header";
 import {setSearchField,setRobots} from './actions/actions'
 import "./App.css";
 
@@ -12,6 +13,7 @@ const App = ({setSearchField, setRobots, searchField, robots, isLoading }) => {
 
   useEffect(() => {
     setRobots();
+    // eslint-disable-next-line
   }, []);
 
   const handleTextChange = (e) => {
@@ -23,7 +25,7 @@ const App = ({setSearchField, setRobots, searchField, robots, isLoading }) => {
   );
   return (
     <div className='tc'>
-      <h1 className='f1 title'>Robo Friends</h1>
+      <Header />
       <hr />
       {isLoading ? (
         <Loading />
