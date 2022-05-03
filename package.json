@@ -2,7 +2,7 @@
   "name": "robo-firends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dementedearplug.github.io/robo-firends",
+  "homepage": "https://dementedearplug.github.io/robo-friends",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
