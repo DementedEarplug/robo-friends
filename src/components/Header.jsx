@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Header = () => {
-  console.log("Header")
   return (
     <h1 className='f1 title'>Robo Friends</h1>
   )
