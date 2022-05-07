@@ -14,17 +14,17 @@ Object {
         />
         <div>
           <h2
-            role="name"
+            data-testid="name"
           >
             wallace
           </h2>
           <p
-            role="email"
+            data-testid="email"
           >
             wallace@email.com
           </p>
           <p
-            role="phone"
+            data-testid="phone"
           >
             707099883
           </p>
@@ -42,17 +42,17 @@ Object {
       />
       <div>
         <h2
-          role="name"
+          data-testid="name"
         >
           wallace
         </h2>
         <p
-          role="email"
+          data-testid="email"
         >
           wallace@email.com
         </p>
         <p
-          role="phone"
+          data-testid="phone"
         >
           707099883
         </p>

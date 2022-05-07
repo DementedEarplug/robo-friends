@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Card from './Card'
 
 
 const RobotList = ({robots}) => {
+
   return (
     <>
       {robots.map((robot) => (

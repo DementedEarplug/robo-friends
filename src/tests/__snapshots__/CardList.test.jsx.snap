@@ -14,17 +14,17 @@ Object {
         />
         <div>
           <h2
-            role="name"
+            data-testid="name"
           >
             wallace
           </h2>
           <p
-            role="email"
+            data-testid="email"
           >
             wallace@email.com
           </p>
           <p
-            role="phone"
+            data-testid="phone"
           >
             707099883
           </p>
@@ -39,17 +39,17 @@ Object {
         />
         <div>
           <h2
-            role="name"
+            data-testid="name"
           >
             pollo
           </h2>
           <p
-            role="email"
+            data-testid="email"
           >
             pollo@email.com
           </p>
           <p
-            role="phone"
+            data-testid="phone"
           >
             707023883
           </p>
@@ -64,17 +64,17 @@ Object {
         />
         <div>
           <h2
-            role="name"
+            data-testid="name"
           >
             rco
           </h2>
           <p
-            role="email"
+            data-testid="email"
           >
             rco@email.com
           </p>
           <p
-            role="phone"
+            data-testid="phone"
           >
             723449883
           </p>
@@ -92,17 +92,17 @@ Object {
       />
       <div>
         <h2
-          role="name"
+          data-testid="name"
         >
           wallace
         </h2>
         <p
-          role="email"
+          data-testid="email"
         >
           wallace@email.com
         </p>
         <p
-          role="phone"
+          data-testid="phone"
         >
           707099883
         </p>
@@ -117,17 +117,17 @@ Object {
       />
       <div>
         <h2
-          role="name"
+          data-testid="name"
         >
           pollo
         </h2>
         <p
-          role="email"
+          data-testid="email"
         >
           pollo@email.com
         </p>
         <p
-          role="phone"
+          data-testid="phone"
         >
           707023883
         </p>
@@ -142,17 +142,17 @@ Object {
       />
       <div>
         <h2
-          role="name"
+          data-testid="name"
         >
           rco
         </h2>
         <p
-          role="email"
+          data-testid="email"
         >
           rco@email.com
         </p>
         <p
-          role="phone"
+          data-testid="phone"
         >
           723449883
         </p>

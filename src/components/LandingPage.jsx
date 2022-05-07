@@ -5,7 +5,6 @@ import SearchBox from "./SearchBox";
 import Loading from "./loader/Loading";
 import Scrollable from "./Scrollable";
 import Header from "./Header";
-import {setSearchField,setRobots} from '../actions/actions'
 // import "./LandingPage.css";
 
 const LandingPage = ({setSearchField, setRobots, searchField, robots, isLoading }) => {
@@ -22,6 +21,7 @@ const LandingPage = ({setSearchField, setRobots, searchField, robots, isLoading 
   const filteredRobots = robots.filter((robot) =>
     robot.name.toLowerCase().includes(searchField.toLocaleLowerCase())
   );
+
   return (
     <div className='tc'>
       <Header />

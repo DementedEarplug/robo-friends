@@ -35,8 +35,8 @@ describe("Card Componen tests", () => {
         phone={robot.phone}
       />
     );
-    expect(screen.getByRole("name")).toHaveTextContent('wallace')
-    expect(screen.getByRole("phone")).toHaveTextContent('707099883')
-    expect(screen.getByRole("email")).toHaveTextContent('wallace@email.com')
+    expect(screen.getByTestId("name")).toHaveTextContent('wallace')
+    expect(screen.getByTestId("phone")).toHaveTextContent('707099883')
+    expect(screen.getByTestId("email")).toHaveTextContent('wallace@email.com')
   });
 });
