@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import RobotList from "../components/RobotList";
+import RobotList from "../../components/RobotList";
 
 describe('Test for the RobotList component', () => {
    const mockRobots = [

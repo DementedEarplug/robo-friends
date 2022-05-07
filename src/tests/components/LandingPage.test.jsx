@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import LandingPage from "../components/LandingPage";
+import LandingPage from "../../components/LandingPage";
 
 describe('Test for the LandingPage component', () => {
   afterEach(cleanup)

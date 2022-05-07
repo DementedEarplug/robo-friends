@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
 describe("Card Componen tests", () => {
   const robot = {

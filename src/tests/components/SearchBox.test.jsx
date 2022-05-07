@@ -2,11 +2,11 @@ import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import Scrollable from "../components/Scrollable";
+import SearchBox from "../../components/SearchBox";
 
-describe('Test for the Scrollable component', () => {
+describe('Test for the SearchBox component', () => {
 
   it('Should match the snapshot', () => {
-    expect(render(<Scrollable />)).toMatchSnapshot()
+    expect(render(<SearchBox />)).toMatchSnapshot()
   });
  })
