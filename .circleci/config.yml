@@ -1,20 +1,26 @@
 version: 2
 jobs:
-  build1:
+  build:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/node:16.14.0
     steps:
       - checkout
-      - run: echo "Hello from CircleCI"
-  build2:
+      - run: echo "Installing dependencies..."
+      - run: npm install
+      - run: echo "Building the project..."
+      - run: CI=true npm run build # The env var only has meaning if you have an implementation in place within the project.
+  test:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/node:16.14.0
     steps:
       - checkout
-      - run: echo "Hello from CircleCI again"
+      - run: echo "Installing dependencies..."
+      - run: npm install
+      - run: echo "Running test suite"
+      - run: npm run test
 workflows:
   version: 2
   pipeline:
     jobs:
-      - build1
-      - build2
+      - build
+      - test
