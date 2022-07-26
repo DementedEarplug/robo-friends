@@ -6,7 +6,9 @@ const initialState = {
   isLoading: true,
 };
 
-export default (state = initialState, action) => {
+let reducer;
+
+export default reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ROBOTS:
       return { ...state, robots: action.payload };
