@@ -1,8 +1,20 @@
 version: 2
 jobs:
-  build:
+  build1:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "Hello from CircleCI"
+  build2:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "Hello from CircleCI again"
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - build1
+      - build2
